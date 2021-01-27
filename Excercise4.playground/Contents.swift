@@ -118,3 +118,5 @@ print("Total years: \(String(describing: yearsPassed)) , total months: \(String(
  Use Exercise 5 monthOfBirth to calculate in which quarter of the year you were born.
  Use switch case to print("I was born in the ... quarter")
  */
+
+
