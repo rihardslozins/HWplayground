@@ -119,4 +119,3 @@ print("Total years: \(String(describing: yearsPassed)) , total months: \(String(
  Use switch case to print("I was born in the ... quarter")
  */
 
-
