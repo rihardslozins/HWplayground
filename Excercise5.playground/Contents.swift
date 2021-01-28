@@ -86,3 +86,4 @@ while meters < postHeight {
 }
 
 print("Bug will spend \(numberOfDays) days to reach top of the post")
+
