@@ -119,3 +119,25 @@ print("Total years: \(String(describing: yearsPassed)) , total months: \(String(
  Use switch case to print("I was born in the ... quarter")
  */
 
+if let month = calendar.dateComponents([.month], from: birthDate!).month {
+    var quarter = 0
+    
+    switch month {
+    case 1...3:
+        quarter = 1
+    case 4...6:
+        quarter = 2
+    case 7...9:
+        quarter = 3
+    case 10...12:
+        quarter = 4
+    default:
+        quarter = 0
+    }
+    
+    if quarter != 0 {
+        print("I was born in the \(quarter) quarter!")
+    }else{
+        print("unable to check month of birth")
+    }
+}
