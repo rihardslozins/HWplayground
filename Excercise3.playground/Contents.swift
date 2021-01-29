@@ -19,13 +19,16 @@ replacing Double with the sum of squares of length.
 
 //MARK: - Hypotenuse of the triangle
 
+
 func hypotenuse(aSide: Double, bSide: Double) -> Double {
     return (aSide * aSide + bSide * bSide).squareRoot()
 }
 
 let sizeHypotenuse = hypotenuse(aSide: 8.0, bSide: 6.0)
 
+
 //MARK: - Area of a triangle
+
 
 let aSide: Double = 8.0
 let bSide: Double = 6.0
@@ -38,8 +41,8 @@ let areaNoSq = (semiPerimeter*(semiPerimeter-aSide)*(semiPerimeter-bSide)*(semiP
 let triangleArea = sqrt(areaNoSq)
 let doubleTriangleArea = String(format: "%.2f", triangleArea)
 
-
 //MARK: - Triangle perimeter
+
 
 let trianglePerimeter: Double = (aSide+bSide+sizeHypotenuse)
 
