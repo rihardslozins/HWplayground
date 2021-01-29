@@ -52,18 +52,18 @@ calculateCash()
  */
 
 func isEvenNumber (){
-    
+
     let numbers = 8
-    
+
     for i in numbers...10{
-        
+
         if(i % 2 == 0){
-            
+
             print("The Number is Even - True")
             break
-            
+
         }else{
-            
+
             print("The number is not even - False")
             break
         }
@@ -98,4 +98,3 @@ createArray()
  Calculate and remove isEvenNumber using if array.firstIndex of number, inside the if array.remove at index.
  It should be 1/2 of createArray and started from [1,3,5.....
  */
-
