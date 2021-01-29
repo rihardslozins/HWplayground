@@ -98,3 +98,4 @@ createArray()
  Calculate and remove isEvenNumber using if array.firstIndex of number, inside the if array.remove at index.
  It should be 1/2 of createArray and started from [1,3,5.....
  */
+
