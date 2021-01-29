@@ -9,6 +9,7 @@ import UIKit
  1.3 Print the result with print ()
  */
 
+
 var firstNumber: Float = 2.14
 var secondNumber: Float = 44.00
 
@@ -16,6 +17,7 @@ var sumOfNumbers = Double(firstNumber + secondNumber)
 let doubleSumOfNumbers = String(format: "%.2f", sumOfNumbers)
 
 print("Sum of two numbers is \(doubleSumOfNumbers)")
+
 
 //MARK: - Second code part
 
@@ -28,6 +30,7 @@ print("Sum of two numbers is \(doubleSumOfNumbers)")
  2.5 Output to the console the message: "When dividing <...> by <...>, the result is <...>, the remainder is <...>".
  */
 
+
 var numberOne = 11
 var numberTwo =  8
 
@@ -38,6 +41,7 @@ let remainderValue = numberOne % numberTwo
 
 print("When dividing \(numberOne) by \(numberTwo) , the result is \(divided) , the remainder is \(remainderValue) ")
 
+
 //MARK: - Third code part
 
 /*
@@ -46,6 +50,7 @@ print("When dividing \(numberOne) by \(numberTwo) , the result is \(divided) , t
  If you are buying 5 and more, with discount it will cost you 900 each! If you are buying 10 and more with discount it will cost you 850 each! Create if-else statements to check Conditions of buying in different amount!
  print("new: \(qty) MacBook Pro with the price of: \(price) EUR, will cost you: \(totalSum) Eur")
  */
+
 
 var macbookPro = 1000
 var totalSum = 0
@@ -66,6 +71,7 @@ else {
 
 print("new: \(macbookCount) MacBook Pro with the price of: \(macbookPro) EUR, will cost you: \(totalSum) Eur")
 
+
 //MARK: - Fourth code part
 
 /*
@@ -73,6 +79,7 @@ print("new: \(macbookCount) MacBook Pro with the price of: \(macbookPro) EUR, wi
  Create String userInputAge and put value "33a" and convert to Int to make Fatal error: Unexpectedly found nil while unwrapping an Optional value!
  Fix this Fatal error inside the if-else statements to print whenever this age can be converted to Int or not!
  */
+
 
 var userInputAge = "33a"
 var userInputAgeInt = Int(userInputAge)
@@ -83,6 +90,7 @@ if userInputAgeInt == nil {
     print("userInputAgeInt:", userInputAgeInt as Any)
 }
 
+
 //MARK: - Fifth code part
 
 /*
@@ -90,6 +98,7 @@ if userInputAgeInt == nil {
  Calculate the number of years, months, days from you birthday to current date.
  print("Total years: \(totalYearsFromBirth) , total months: \(totalMonthFromBirth), total days: \(totalDaysFromBirth)")
  */
+
 
 let formatter = DateFormatter()
 formatter.dateFormat = "dd.MM.yyyy"
@@ -111,6 +120,7 @@ let daysPassed = calendar.dateComponents([.day], from: birthDate!, to: futureDat
 
 print("Total years: \(String(describing: yearsPassed)) , total months: \(String(describing: monthsPassed)), total days: \(String(describing: daysPassed))")
 
+
 //MARK: - Sixth code part
 
 /*
@@ -118,6 +128,7 @@ print("Total years: \(String(describing: yearsPassed)) , total months: \(String(
  Use Exercise 5 monthOfBirth to calculate in which quarter of the year you were born.
  Use switch case to print("I was born in the ... quarter")
  */
+
 
 if let month = calendar.dateComponents([.month], from: birthDate!).month {
     var quarter = 0
