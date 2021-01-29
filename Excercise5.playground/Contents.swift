@@ -8,6 +8,7 @@ import UIKit
  print("Amount of income after \(period) years will be \(profit) Eur. My total deposit will be \(deposit) Eur !")
  */
 
+
 var period = 5
 var profit = 0.0
 var deposit = 500000.0
@@ -31,12 +32,14 @@ for _ in 1...period {
 
 print("Amount of income after \(period) years will be \(totalProfit) Eur. My total deposit will be \(deposit) Eur !")
 
+
 //MARK: - Exercise 2
 /*
  Exercise 2
  Create an integer array with any set of numbers and  print("My even numbers are: \(evenNumber)")
  Use a % inside the for loop.
  */
+
 
 let numberArray = [1,2,6,2,1,3]
 
@@ -46,11 +49,13 @@ for numberArray in numberArray {
     }
 }
 
+
 //MARK: - Exercise 3
 /*
  Exercise 3
  Inside the for loop create randomNumber for the random Int calculation. Calculate and print("Number 5 will be after \(counter) shuffles"). Don't forget to make a break inside the if statement.
  */
+
 
 for counter in 1...10 {
     let randomNum = Int.random(in: 1...10)
@@ -63,11 +68,13 @@ for counter in 1...10 {
     
 }
 
+
 //MARK: - Exercise 4
 /*
  Exercise 4
  A bug is climbing to a 10-meter electric post. During the day, bug can climb two meters, during the night she slides down to 1 meter. Determine with the help of the cycle how many days bug will climb on the top of the post. Think about which loop to use in which situation. print("bug will spend \(numberOfDays)) to reach top of the post")
  */
+
 
 let postHeight = 10
 let inDay = 2
@@ -86,4 +93,3 @@ while meters < postHeight {
 }
 
 print("Bug will spend \(numberOfDays) days to reach top of the post")
-
