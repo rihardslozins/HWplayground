@@ -8,30 +8,23 @@ import UIKit
  print("Amount of income after \(period) years will be \(profit) Eur. My total deposit will be \(deposit) Eur !")
  */
 
-
-var period = 5
+var deposit = 500_000.00
+var firstDeposit = deposit
+var rate = 1.01
+var annualProfit = 0.0
 var profit = 0.0
-var deposit = 500000.0
-let rate = 0.10
-var totalProfit = 0.0
+var period = 5
 
 for _ in 1...period {
-    
-    profit = deposit * rate
-    
-    print("Profit after iteration: ", profit)
-    
-    deposit += profit
-    
-    print("Deposit after profit: ", deposit)
-    
-    totalProfit = deposit - 500000.0
-    
-    print("TotalProfit: ",totalProfit)
+    annualProfit = (deposit * rate) - deposit
+    deposit = deposit + annualProfit
+    profit += annualProfit
 }
 
-print("Amount of income after \(period) years will be \(totalProfit) Eur. My total deposit will be \(deposit) Eur !")
+var depositRounded = String(format: "%.2f", deposit)
+var profitRounded = String(format: "%.2f", profit)
 
+print("Amount of income after \(period) years with start deposit of \(firstDeposit) and interest rate \(rate) per annum will be \(profitRounded) Eur. My total deposit will be \(depositRounded) Eur!")
 
 //MARK: - Exercise 2
 /*
@@ -40,15 +33,15 @@ print("Amount of income after \(period) years will be \(totalProfit) Eur. My tot
  Use a % inside the for loop.
  */
 
-
 let numberArray = [1,2,6,2,1,3]
+var evenNumber = [Int]()
 
-for numberArray in numberArray {
-    if numberArray % 2 == 0 {
-        print("My even numbers are: \(numberArray)")
+for i in numberArray {
+    if i % 2 == 0 {
+        evenNumber += [i]
     }
+    print("My even numbers are: \(evenNumber)")
 }
-
 
 //MARK: - Exercise 3
 /*
@@ -56,18 +49,19 @@ for numberArray in numberArray {
  Inside the for loop create randomNumber for the random Int calculation. Calculate and print("Number 5 will be after \(counter) shuffles"). Don't forget to make a break inside the if statement.
  */
 
+var counter = 0
+var randomNumber: Int
 
-for counter in 1...10 {
-    let randomNum = Int.random(in: 1...10)
-    if randomNum == 5 {
-        print("Number 5 will be after \(counter) shuffles")
-        break
-    }
-    
-    //Needs more code.
+for _ in 1... {
+  randomNumber = Int.random(in: 1...100)
+  counter += 1
+  if randomNumber == 5 {
+    break
+  }
     
 }
 
+print("Number 5 will be after \(counter) shuffles")
 
 //MARK: - Exercise 4
 /*
@@ -75,21 +69,20 @@ for counter in 1...10 {
  A bug is climbing to a 10-meter electric post. During the day, bug can climb two meters, during the night she slides down to 1 meter. Determine with the help of the cycle how many days bug will climb on the top of the post. Think about which loop to use in which situation. print("bug will spend \(numberOfDays)) to reach top of the post")
  */
 
-
-let postHeight = 10
-let inDay = 2
-let inNight = 1
+let electricPostHeight = 10
+let daySpeed = 2
+let nightSpeed = -1
+var bugClimb = 0
 var numberOfDays = 0
-var meters = 0
-var hours = 0
 
-while meters < postHeight {
-    
-    meters += inDay
-    
-    meters -= inNight
-    
+while true {
+    bugClimb += daySpeed
     numberOfDays += 1
+    
+    if bugClimb == electricPostHeight {
+        print("Bug will spend \(numberOfDays) days to reach top of the post")
+        break
+    }
+    
+    bugClimb += nightSpeed
 }
-
-print("Bug will spend \(numberOfDays) days to reach top of the post")
