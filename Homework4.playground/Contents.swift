@@ -15,14 +15,17 @@ import UIKit
 
 let myTeam = "Boys"
 
-var resultsOfGames = ["teamName" :  "Brooklyn Nets",
-                      "score"    :  "99:89"]
+var resultsOfGames: [String: [String]] = [
+    "Brooklyn Nets": ["99:89", "109:99"],
+    "Dallas Mavericks": ["87:93", "104:97"],
+    "Washington Wizards": ["117:112", "107:122"]
+]
 
-resultsOfGames["teamName"]
-resultsOfGames["score"]
-
-print(myTeam, "against", resultsOfGames["teamName"]!, "scored", "-", resultsOfGames["score"]!)
-
+for (teamName, results) in resultsOfGames {
+    for result in results {
+        print("\(myTeam) against \(teamName) scored \(result).")
+    }
+}
 
 //MARK: - Exercise 2
 /*
@@ -32,69 +35,78 @@ print(myTeam, "against", resultsOfGames["teamName"]!, "scored", "-", resultsOfGa
  Run the func.
  */
 
-let moneyArray = [5, 10, 20, 50, 100, 200, 500]
+let wallet = [5, 10, 20, 50, 100, 200, 500]
 
-func calculateCash(){
+func calcualteCash(cash: [Int]) -> Int {
+    var sum = 0
     
-    let cashAmount = moneyArray.reduce(0, +)
-    
-    print("The amount in my vallet is: \(cashAmount)")
-    
+    for i in wallet {
+        sum = sum + i
+    }
+    print("You have \(sum)EUR in cash inside your wallet right know!")
+    return sum
 }
 
-calculateCash()
+calcualteCash(cash: wallet)
 
-//MARK: - Exercise 3
-/*
- Exercise 3
- Create a func isEvenNumber to calculate if a number is odd or even. If the number is even func should return true.
- Run the func.
- */
-
-func isEvenNumber (){
-
-    let numbers = 8
-
-    for i in numbers...10{
-
-        if(i % 2 == 0){
-
-            print("The Number is Even - True")
-            break
-
-        }else{
-
-            print("The number is not even - False")
-            break
+    
+    //MARK: - Exercise 3
+    /*
+     Exercise 3
+     Create a func isEvenNumber to calculate if a number is odd or even. If the number is even func should return true.
+     Run the func.
+     */
+    
+    func isEvenNumber(number: Int) -> Bool {
+        
+        if number % 2 == 0 {
+            
+            return true
+        } else {
+            return false
         }
     }
-}
 
-isEvenNumber()
-
-//MARK: - Exercise 4
-/*
- Exercise 4
- Create a func createArray to calculate some number from start: to end: than return Int array.
- Declare array and put createArray(from: 1, to: 100)
- print(array)
- */
-
-func createArray() {
+    isEvenNumber(number: 21)
     
-    let array = Array(1...100)
+    //MARK: - Exercise 4
+    /*
+     Exercise 4
+     Create a func createArray to calculate some number from start: to end: than return Int array.
+     Declare array and put createArray(from: 1, to: 100)
+     print(array)
+     */
+    
+    func createArray(from start: Int, to end: Int)  -> [Int] {
+        
+        var tempArray: [Int] = []
+        let range = start...end
+        for i in range {
+            tempArray.append(i)
+        }
+        
+        return tempArray
+    }
+    
+    var array = createArray(from: 1, to: 100)
     
     print(array)
-}
-
-createArray()
-
-//MARK: - Exercise 5
-/*
- Exercise 5
- Create for loop.
- Use array result from Exercise 4.
- Use isEvenNumber from Exercise 3.
- Calculate and remove isEvenNumber using if array.firstIndex of number, inside the if array.remove at index.
- It should be 1/2 of createArray and started from [1,3,5.....
- */
+    
+    //MARK: - Exercise 5
+    /*
+     Exercise 5
+     Create for loop.
+     Use array result from Exercise 4.
+     Use isEvenNumber from Exercise 3.
+     Calculate and remove isEvenNumber using if array.firstIndex of number, inside the if array.remove at index.
+     It should be 1/2 of createArray and started from [1,3,5.....
+     */
+    
+    print("------------------")
+    
+    for i in array {
+        if isEvenNumber(number: i) {
+            array.remove(at: array.firstIndex(of: i)!)
+        }
+    }
+    print(array)
