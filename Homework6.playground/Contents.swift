@@ -8,7 +8,6 @@ import UIKit
  */
 
 enum calculationType: String {
-    
     case addition
     case subtraction
     case multiplication
