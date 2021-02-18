@@ -80,14 +80,11 @@ class superFigure {
     
     func squareOfFigure() -> Float{
         return square
-        
     }
     
     func perimeterOfFigure() -> Float{
         return perimeter
-        
     }
-    
 }
 
 class subRectangle: superFigure {
