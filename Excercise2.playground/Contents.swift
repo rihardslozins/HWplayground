@@ -9,7 +9,6 @@ Create a constant named myAge and assign it the value of your age.
 
 let myAge = 31
 
-
 //MARK: - Exercise 2.2
 
 /*
@@ -22,7 +21,6 @@ let a = 10
 
 var myAgeInTenYears = myAge + a
 
-
 //MARK: - Exercise 2.3
 
 /*
@@ -31,7 +29,6 @@ Declare another daysInYear constant and set it to 365.25 (the number of days in 
 
 
 let daysInYear = 365.25
-
 
 //MARK: - Exercise 2.4
 
@@ -43,7 +40,6 @@ Declare a Float variable named daysPassed and set it to the number of days since
 var tenYears = Float(daysInYear) * 10
 
 var daysPassed = Float(myAge) * tenYears
-
 
 //MARK: - Exercise 2.5
 
