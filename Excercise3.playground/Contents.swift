@@ -1,6 +1,4 @@
 import UIKit
-
-
 /*
  
 Exercise 3.
@@ -47,5 +45,3 @@ let doubleTriangleArea = String(format: "%.2f", triangleArea)
 let trianglePerimeter: Double = (aSide+bSide+sizeHypotenuse)
 
 print("Hypotenuse of the triangle is \(sizeHypotenuse) and the Area of the triangle is \(doubleTriangleArea), last but not least - the perimeter of the triangle is \(trianglePerimeter). Kudos!")
-
-
